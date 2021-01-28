@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    min-height: 100vh;;
+    background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+    padding-top: 5%;
+    padding-left: 5%;
+    z-index: -4;
+}
+
+/************Sections************/
+
+p {
+    left: 1%;
+    top: 2%;
+}
+
+.glass1, .glass2, .glass3, .glass4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    min-height: 80vh;
+    width: 60%;
+    border-radius: 2rem;
+    background: linear-gradient(to right bottom, rgba(255,255,255,0.7), rgba(255,255,255,0.3));
+    position: absolute;
+    overflow: hidden;
+}
+
+/* about section */
+.glass1 { 
+    z-index: 4;
+    /* background: white; */
+}
+
+.glass1:hover {
+    background: white;
+}
+
+/* github section */
+.glass2 {
+    z-index: 3;
+    width: 70%
+}
+
+
+/* resume section */
+.glass3 {
+    z-index: 2;
+    width: 80%
+}
+
+
+/* contact section */
+.glass4 {
+    z-index: 1;
+    width: 90%
+}
+
+.active {
+    background: white;
+    z-index: 4;
+    left: 8%;
+}
+
+/*********Tabs style and animations***********/
+
+h3 {
+    position: absolute;
+    bottom: 2%;
+    right: 5%;
+}
+
+i {
+    position: absolute;
+    bottom: 2.1%;
+    right: 7%;
+}
+
+@media screen and (max-width: 1535px)
+{
+    i {
+        transition: .2s ease-out;
+        transition-property: opacity;
+        opacity: 0;
+    }
+}
+
+@media screen and (min-width: 1535px)
+{
+    i {
+        transition: .2s ease-out;
+        transition-property: opacity;
+        opacity: 1;
+    }
+}
+
+
+@media screen and (max-width: 445px)
+{
+    i {
+        transition: .2s ease-out;
+        transition-property: opacity;
+        opacity: 1;
+    }
+
+    h3{
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 1380px)
+{
+    
+    h3 {
+        transition: 1s ease-in-out;
+        transition-property: right;
+        right: 2%;
+    }
+}
+
+@media screen and (max-width: 1200px)
+{
+    h3 {
+        transition: .3s ease-in;
+        transition-property: all;
+        transform: rotate(90deg);
+        right: .1%;
+        bottom: 4%;
+    }
+}
+
+@media screen and (min-width: 1380px)
+{
+    
+    h3 {
+        transition: 1s ease-in-out;
+        transition-property: right;
+        right: 5%;
+    }
+}
+
+@media screen and (min-width: 1200px)
+{
+    h3 {
+        transition: .3s ease-in;
+        transition-property: all;
+        transform: rotate(0deg);
+        right: 2%;
+        
+    }
+}
+
+
+/*********Section Contents***********/
+
+/*about*/
+
+/* h1 {
+    font-size: 40px;
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    height: 700px;
+    width: 900px;
+    padding: 25px;
+}
+
+.image{
+    width: 300px;
+    height: 400px;
+}
+
+.image {
+    background-image: url("./images/Forest.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 8px;
+    box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.541);
+
+} */
+
+.shell {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+}
+
+.container1 {
+    background: rgba(255, 255, 255, 0);
+    height: 55vh;
+    width: 100%;
+}
+
+.container2 {
+    background: rgba(252, 198, 99, 1);
+    height: 25vh;
+    width: 100%;
+}
+
+.container3 {
+    background: rgba(255, 255, 255, 0);
+    height: 60vh;
+    width: 100%;
+}
+
+.container4 {
+    background: rgb(99, 196, 252);
+    height: 20vh;
+    width: 100%;
+}
+
+.container5 {
+    background: rgba(255, 255, 255, 0);
+    height: 65vh;
+    width: 100%;
+}
+
+.container6 {
+    background: rgb(173, 38, 38);
+    height: 15vh;
+    width: 100%;
+}
+
+.container7 {
+    background: rgba(255, 255, 255, 0);
+    height: 70vh;
+    width: 100%;
+}
+
+.container8 {
+    background: rgba(252, 198, 99, 1);
+    height: 10vh;
+    width: 100%;
+}
