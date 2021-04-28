@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="content/styles.css" />
+    <title>Roundtable</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div id="navbar">
+      <a class="nav-link" href="index.html">Home</a>
+
+      <a class="nav-link" href="about.html">About</a>
+
+      <a class="nav-link" href="challenge.html">Challenge</a>
+    </div>
+    <!-- Main -->
+    <div class="main">
+      <h1>
+        <select id="options">
+          <option>Challenge 1</option>
+          <option>Challenge 2</option>
+        </select>
+      </h1>
+
+      <input type="file" id="file-input" />
+
+      <div id="challenge-text-box">
+        <!-- Similar to last week, you will be given a list of objects, each
+        representing a developer. <br />
+        Your job is to divide these developers into groups based on their
+        preferred coding language. <br />
+        Each group must be sorted by the number of years each developer has with
+        his/her preferred language.<br /><br />
+
+        Example<br />
+
+        var developers = [<br />
+        {firstName: 'Jeff', lastName: 'A', age: 28, language: 'C#',
+        yearsOfExperience: 5},<br />
+        {firstName: 'Lindsey', lastName: 'S', age: 35, language: 'Python',
+        yearsOfExperience: 3},<br />
+        {firstName: 'Gavin', lastName: 'K', age: 46, language: 'Java',
+        yearsOfExperience: 12}, <br />
+        {firstName: 'Marleen', lastName: 'B', age: 51, language: 'C#',
+        yearsOfExperience: 20}, <br />
+        {firstName: 'Brent', lastName: 'K', age: 21, language: 'JavaScript',
+        yearsOfExperience: 1}, <br />
+        {firstName: 'Ashley', lastName: 'T', age: 33, language: 'JavaScript',
+        yearsOfExperience: 6}, <br />
+        {firstName: 'Kristen', lastName: 'H', age: 41, language: 'Python',
+        yearsOfExperience: 9}, <br />
+        {firstName: 'Joshua', lastName: 'Y', age: 50, language: 'Python',
+        yearsOfExperience: 5} <br />
+        ];<br /><br />
+
+        Output ==><br />
+        C#: Marleen B, Jeff A<br />
+        Java: Gavin K<br />
+        JavaScript: Ashley T, Brent K<br />
+        Python: Kristen H, Joshua Y, Lindsey S<br /><br />
+
+        For extra points, you can create a GUI to represent the output of this
+        code. -->
+      </div>
+
+      <button type="button" onclick="returnResult()">Click for result</button>
+
+      <div id="result-box"></div>
+
+      <button type="button" onclick="clearFields()">Clear</button>
+    </div>
+
+    <!-- Footer -->
+    <footer>&copy;Forest Moher 2021</footer>
+  </body>
+
+  <script src="scripts/challenge.js"></script>
+</html>

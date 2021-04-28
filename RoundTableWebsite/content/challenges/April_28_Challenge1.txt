@@ -1,0 +1,26 @@
+Similar to last week, you will be given a list of objects, </br>
+each representing a developer. Your job is to divide these </br>
+developers into groups based on their preferred coding language.</br> 
+Each group must be sorted by the number of years each developer </br>
+has with his/her preferred language.</br>
+</br>
+Example</br>
+</br>
+var developers = [</br>
+{firstName: 'Jeff', lastName: 'A', age: 28, language: 'C#', yearsOfExperience: 5},</br>
+{firstName: 'Lindsey', lastName: 'S', age: 35, language: 'Python', yearsOfExperience: 3},</br>
+{firstName: 'Gavin', lastName: 'K', age: 46, language: 'Java', yearsOfExperience: 12}, </br>
+{firstName: 'Marleen', lastName: 'B', age: 51, language: 'C#', yearsOfExperience: 20}, </br>
+{firstName: 'Brent', lastName: 'K', age: 21, language: 'JavaScript', yearsOfExperience: 1}, </br>
+{firstName: 'Ashley', lastName: 'T', age: 33, language: 'JavaScript', yearsOfExperience: 6}, </br>
+{firstName: 'Kristen', lastName: 'H', age: 41, language: 'Python', yearsOfExperience: 9}, </br>
+{firstName: 'Joshua', lastName: 'Y', age: 50, language: 'Python', yearsOfExperience: 5} </br>  
+];</br></br>
+
+Output ==></br>
+C#: Marleen B, Jeff A</br>
+Java: Gavin K</br>
+JavaScript: Ashley T, Brent K</br>
+Python: Kristen H, Joshua Y, Lindsey S</br>
+</br>
+For extra points, you can create a GUI to represent the output of this code. </br>
