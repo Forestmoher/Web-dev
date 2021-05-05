@@ -1,17 +1,23 @@
-/****** Header Section ******/
+/****** Layout Section ******/
 
 :root {
-    --main-bg-color: #F0F6F6;
-    --text-color-dark: #1f2041;
-    --text-color-light: #F0F6F6;
-    --color-pop: #FFCA3A;
-    /* --color-pop: #FABC2A; */
-    --navbar-color:#4b3f72;
-    --neutral-color: #5F7367;
+    --main-bg-color: #eeeff0;
+    --text-color-dark: #3d4553;
+    --text-color-light: #eeeff0;
+    --color-pop: #e9cf5c;
+    --navbar-color:#3d4553;
+    --neutral-color: #99a49e;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-    margin: 0px auto;
+    height: 100%;
+    margin: 0px 0px 50px;
+    /* padding-bottom: 50px; */
     background-color: var(--main-bg-color);
 }
 
@@ -22,9 +28,7 @@ body {
     justify-content: center;
     width: 100%;
     height: 50px;
-    background-color: var(--navbar-color);
-    /* background: linear-gradient(to bottom, #603F83FF, #C7D3D4FF); */
-    
+    background-color: var(--navbar-color);  
 }
 
 .nav-link {
@@ -42,6 +46,8 @@ body {
     background-color: var(--main-bg-color);
     color: var(--text-color-dark);
 }
+
+
 
 @media screen and (max-width: 365px)
 {
@@ -68,43 +74,138 @@ body {
     }
 }
 
-
-/****** Main Section ******/
-
 .main {
-    min-height: 85vh;
     height: auto;
+    min-height: 85vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-bottom: 10px;
 }
 
-/*==== Index page ====*/
-.circle {
+.footer {
+    background-color: var(--neutral-color);
+    color: var(--text-color-light);
+    border-top: 2px solid var(--color-pop);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    padding-top: 20px;
+    overflow: hidden;
+    text-align: center;
+}
+
+/****** Index page ******/
+#circle {
     width: 500px;
     height: 500px;
-    /* background: radial-gradient(circle at 100px 100px, #f4ff5c, rgba(154, 215, 255, 0.705)); */
-
-    background: radial-gradient(circle at 100px 100px, var(--color-pop), rgba(0, 0, 0, 0));
-    border-radius: 50% 0 50% 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: radial-gradient(circle at 400px 400px, var(--color-pop), rgba(0, 0, 0, 0));
+    border-radius: 50%;
+    box-shadow: 10px 10px 5px 3px rgba(0, 0, 0, 0.1);
+    transform: scale(100%);
 }
 
 .title {
+    position: absolute;
     font-size: 150px;
     color: var(--text-color-dark);
+    z-index: 1;
 }
 
 #hidden-title {
     display: none;
 }
 
+/****** About page ******/
+
+.about-container {
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 5% 15%;
+}
+
+.bio {
+    text-align: center;
+    width: 400px;
+    height: auto;
+    padding: 15px;
+    overflow: hidden;
+}
+
+.image-container {
+    width: 450px;
+    height: 500px;
+    background-image: url('../content/images/Forest.png');
+    background-size: cover;
+    background-position-x: center;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 10px 10px 5px 3px rgba(0, 0, 0, 0.1);
+
+}
+
+/****** Challenge Page ******/
+
+#file-input {
+    margin: 20px 0;
+}
+
+#challenge-text-box {
+    min-width: 200px;
+    min-height: 80px;
+    width: auto;
+    height: auto;
+    border: 1px solid black;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: white;
+}
+
+#result-box {
+    min-width: 200px;
+    min-height: 80px;
+    width: auto;
+    height: auto;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 20px 0;
+    background-color: white;
+}
+
+#result-btn {
+    background-color: var(--color-pop);
+    width: 100px;
+    height: 30px;
+    padding: 2px;
+    border-radius: 7px;
+}
+
+#result-btn:hover {
+    background-color: #ccb966;
+}
+
+#clear-btn {
+    background-color: rgb(252, 96, 96);
+    width: 100px;
+    height: 30px;
+    padding: 2px;
+    border-radius: 7px;
+}
+
+#clear-btn:hover {
+    background-color: rgb(202, 76, 76);
+}
+
+/****** Media Queries ******/
+
+/*Medium Screen Size*/
 @media screen and (min-width: 800px)
 {
-    .circle {
+    #circle {
         width: 500px;
         height: 500px;
         transition: .2s ease-out;
@@ -120,7 +221,7 @@ body {
 
 @media screen and (max-width: 800px)
 {
-    .circle {
+    #circle {
         width: 300px;
         height: 300px;
         transition: .2s ease-out;
@@ -128,28 +229,30 @@ body {
     }
 
     .title {
-        font-size: 60px;
+        font-size: 80px;
         transition: .2s ease-out;
         transition-property: font-size;
     }
 }
 
-@media screen and (min-width: 333px)
+/*Small Screen Size*/
+@media screen and (min-width: 435px)
 {
-    .circle {
+    #circle {
         display: flex;
         transition: .2s ease-out;
         transition-property: display;
     }
 }
 
-@media screen and (max-width: 333px)
+@media screen and (max-width: 435px)
 {
     .main {
-        background: linear-gradient(to bottom, #f4ff5c 0%, rgba(154, 215, 255, 0.705) 100%);
+        padding: 0;
+        background: linear-gradient(to bottom, var(--main-bg-color) 0%, var(--color-pop) 100%);
     }
     
-    .circle {
+    #circle {
         display: none;
     }
 
@@ -165,51 +268,19 @@ body {
         font-variant: small-caps;
         margin: 0 auto;
     }
-}
 
-/*==== Index page End ====*/
+    .title {
+        display: none;
+    }
 
-/*==== About page ====*/
-/*==== About page End ====*/
+    .image-container {
+        width: 100%;
+        border-radius: 0;
+        border-bottom: 2px solid var(--color-pop);
+    }
 
-/*==== Challenge Page ====*/
-
-#file-input {
-    margin: 20px 0;
-}
-
-#challenge-text-box {
-    min-width: 200px;
-    min-height: 80px;
-    width: auto;
-    height: auto;
-    border: 1px solid black;
-    padding: 10px;
-    margin-bottom: 20px;
-}
-
-#result-box {
-    min-width: 200px;
-    min-height: 80px;
-    width: auto;
-    height: auto;
-    border: 1px solid black;
-    padding: 10px;
-    margin: 20px 0;
-}
-
-/*==== Challenge Page End ====*/
-
-
-/****** Footer Section ******/
-
-footer{
-    width: 100%;
-    height: 5vh;
-    background-color: var(--neutral-color);
-    text-align: center;
-    color: var(--text-color-light);
-    padding-top: 20px;
-    position: absolute;
-    bottom: 0;
+    .bio {
+        background-color: white;
+        width: 100%;
+    }
 }

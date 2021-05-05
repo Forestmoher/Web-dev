@@ -40,6 +40,10 @@ function groupDevs(devs) {
 }
 
 
+
+
+
+
 //===== Challenge 2 =====//
 
 var liquids = [
